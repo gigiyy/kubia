@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: kubia
+  name: kubia
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kubia
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: kubia
+    spec:
+      containers:
+      - image: gigiyy/kubia:build-1
+        name: kubia
+        resources: {}
+status: {}
